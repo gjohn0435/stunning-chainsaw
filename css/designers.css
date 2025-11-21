@@ -2,59 +2,97 @@
 
 .intro-section {
     max-width: 1200px;
-    margin: 32px auto;
+    margin: 24px auto; /* Tighter */
     padding: 0 24px;
 }
 
 .intro-content {
-    border: 4px solid #000000;
-    padding: 32px;
+    border: 5px solid #000000; /* Thicker */
+    padding: 24px; /* Tighter */
     background-color: #FFFF00;
     box-shadow: 8px 8px 0 #000000;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    line-height: 1.3;
+    position: relative;
+}
+
+/* Corner accent */
+.intro-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #FF0000;
+    border-bottom: 4px solid #000000;
+    border-left: 4px solid #000000;
 }
 
 /* Designers Section */
 .designers-section {
     max-width: 1400px;
-    margin: 48px auto;
+    margin: 32px auto; /* Tighter */
     padding: 0 24px;
 }
 
 .section-header {
-    border: 5px solid #000000;
-    padding: 24px;
+    border: 6px solid #000000; /* Thicker */
+    padding: 20px; /* Tighter */
     background-color: #000000;
     color: #FFFFFF;
-    margin-bottom: 32px;
-    box-shadow: 8px 8px 0 #FF0000;
+    margin-bottom: 24px; /* Tighter */
+    box-shadow: 10px 10px 0 #FF0000; /* Larger shadow */
+    position: relative;
+}
+
+/* Corner accents on section headers */
+.section-header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #FF0000;
+    border-top: 5px solid #FFFFFF;
+    border-right: 5px solid #FFFFFF;
 }
 
 .section-header h2 {
     font-size: 48px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px; /* Tighter */
+    line-height: 1.0; /* Very tight */
+    letter-spacing: -1px;
 }
 
 .section-header p {
     font-size: 20px;
     text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
 .digital-section .section-header {
     background-color: #FFFF00;
     color: #000000;
-    box-shadow: 8px 8px 0 #000000;
+    box-shadow: 10px 10px 0 #000000;
+}
+
+.digital-section .section-header::before {
+    background-color: #000000;
+    border-color: #FFFF00;
 }
 
 /* Designer Grid */
 .designer-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 24px; /* Tighter */
 }
 
 .designer-card {
@@ -63,47 +101,65 @@
     box-shadow: 8px 8px 0 #000000;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+/* Corner accent on cards */
+.designer-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #FFFF00;
+    border-bottom: 3px solid #000000;
+    border-left: 3px solid #000000;
 }
 
 .designer-header {
     background-color: #000000;
     color: #FFFFFF;
-    padding: 20px;
-    border-bottom: 4px solid #000000;
+    padding: 16px; /* Tighter */
+    border-bottom: 5px solid #000000; /* Thicker */
 }
 
 .designer-header h3 {
     font-size: 28px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin-bottom: 6px; /* Tighter */
+    line-height: 1.1; /* Tighter */
+    letter-spacing: -0.5px;
 }
 
 .designer-years {
     font-size: 16px;
     color: #FFFF00;
     font-weight: bold;
+    line-height: 1.2;
 }
 
 .designer-content {
-    padding: 24px;
+    padding: 20px; /* Tighter */
 }
 
 .designer-role {
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 16px;
-    padding: 8px;
+    margin-bottom: 12px; /* Tighter */
+    padding: 6px 10px; /* Tighter */
     background-color: #F5F5F5;
-    border: 2px solid #000000;
+    border: 3px solid #000000; /* Thicker */
     display: inline-block;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
 }
 
 .designer-contribution,
 .designer-works {
-    margin: 16px 0;
+    margin: 12px 0; /* Tighter */
 }
 
 .designer-contribution h4,
@@ -112,8 +168,14 @@
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 8px;
-    border-bottom: 2px solid #000000;
+    border-bottom: 3px solid #000000; /* Thicker */
     padding-bottom: 4px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.designer-contribution p {
+    line-height: 1.3;
 }
 
 .designer-works ul {
@@ -122,10 +184,11 @@
 }
 
 .designer-works li {
-    padding: 6px 0;
+    padding: 5px 0; /* Tighter */
     padding-left: 20px;
     position: relative;
     border-bottom: 1px solid #CCCCCC;
+    line-height: 1.3;
 }
 
 .designer-works li:last-child {
@@ -137,65 +200,112 @@
     position: absolute;
     left: 0;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .designer-philosophy {
-    margin-top: 16px;
-    padding: 12px;
+    margin-top: 12px; /* Tighter */
+    padding: 10px; /* Tighter */
     background-color: #FFFF00;
-    border: 3px solid #000000;
-    box-shadow: 4px 4px 0 #000000;
+    border: 4px solid #000000; /* Thicker */
+    box-shadow: 5px 5px 0 #000000; /* Larger shadow */
 }
 
 .designer-philosophy p {
     margin: 0;
     font-style: italic;
     text-align: center;
+    line-height: 1.3;
 }
 
 .highlight-card {
     background-color: #FFFF00;
+    border-width: 6px; /* Even thicker */
+}
+
+.highlight-card::after {
+    background-color: #FF0000;
 }
 
 .highlight-card .designer-header {
     background-color: #FF0000;
+    border-bottom-width: 6px;
 }
 
 /* Principles Section */
 .principles-section {
     max-width: 1200px;
-    margin: 48px auto;
+    margin: 32px auto; /* Tighter */
     padding: 0 24px;
 }
 
 .principles-content {
-    border: 5px solid #000000;
-    padding: 32px;
+    border: 6px solid #000000; /* Thicker */
+    padding: 24px; /* Tighter */
     background-color: #000000;
     color: #FFFFFF;
     box-shadow: 10px 10px 0 #FFFF00;
+    position: relative;
+}
+
+/* Corner accents */
+.principles-content::before,
+.principles-content::after {
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: #FFFF00;
+}
+
+.principles-content::before {
+    top: 0;
+    left: 0;
+    border-bottom: 5px solid #000000;
+    border-right: 5px solid #000000;
+}
+
+.principles-content::after {
+    bottom: 0;
+    right: 0;
+    border-top: 5px solid #000000;
+    border-left: 5px solid #000000;
 }
 
 .principles-content h2 {
     font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 32px;
+    margin-bottom: 24px; /* Tighter */
     text-align: center;
-    border-bottom: 4px solid #FFFFFF;
-    padding-bottom: 16px;
+    border-bottom: 5px solid #FFFFFF; /* Thicker */
+    padding-bottom: 12px; /* Tighter */
+    line-height: 1.0;
+    letter-spacing: -1px;
 }
 
 .principles-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    gap: 20px; /* Tighter */
 }
 
 .principle-box {
-    border: 4px solid #FFFFFF;
-    padding: 24px;
+    border: 5px solid #FFFFFF; /* Thicker */
+    padding: 18px; /* Tighter */
     background-color: #000000;
+    position: relative;
+}
+
+/* Corner marker on principle boxes */
+.principle-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #FFFF00;
 }
 
 .principle-box h3 {
@@ -203,11 +313,13 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #FFFF00;
-    margin-bottom: 12px;
+    margin-bottom: 10px; /* Tighter */
+    line-height: 1.1;
+    letter-spacing: -0.5px;
 }
 
 .principle-box p {
-    line-height: 1.4;
+    line-height: 1.3; /* Tighter */
     color: #FFFFFF;
 }
 
