@@ -1,0 +1,396 @@
+/* NEO-BRUTALISM DESIGN GALLERY */
+/* Raw, Honest, Anti-Corporate Web Design */
+
+/* ==================== */
+/* RESET & BASE */
+/* ==================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+/* NO SMOOTH SCROLLING - Instant, raw */
+html {
+    scroll-behavior: auto;
+}
+
+/* ==================== */
+/* NAVIGATION */
+/* ==================== */
+
+.nav {
+    background-color: #000000;
+    border-bottom: 5px solid #FF0000;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: none; /* NO SMOOTH TRANSITIONS */
+}
+
+.nav-links a:hover {
+    color: #FFFF00;
+}
+
+/* ==================== */
+/* HERO SECTION */
+/* ==================== */
+
+.hero {
+    border: 5px solid #000000;
+    margin: 0;
+    padding: 48px 24px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    letter-spacing: 0;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    margin-bottom: 32px;
+    padding: 16px;
+    border: 3px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.hero-description p {
+    line-height: 1.4;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #FFFF00;
+    color: #000000;
+    padding: 16px 32px;
+    border: 3px solid #000000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 6px 6px 0 #000000;
+    transition: none; /* NO SMOOTH TRANSITIONS */
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    box-shadow: 3px 3px 0 #000000;
+    transform: translate(3px, 3px);
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-box {
+    border: 5px solid #000000;
+    background-color: #CCCCCC;
+    padding: 48px;
+    text-align: center;
+    box-shadow: 10px 10px 0 #000000;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.placeholder-box p {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* ==================== */
+/* SECTIONS */
+/* ==================== */
+
+.about-preview,
+.characteristics,
+.comparison {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.section-border {
+    border: 5px solid #000000;
+    padding: 32px;
+    background-color: #FFFFFF;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    line-height: 1.2;
+    border-bottom: 4px solid #000000;
+    padding-bottom: 16px;
+}
+
+/* ==================== */
+/* CONTENT GRID */
+/* ==================== */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.content-card {
+    border: 4px solid #000000;
+    padding: 24px;
+    background-color: #FFFFFF;
+    box-shadow: 8px 8px 0 #000000;
+}
+
+.content-card h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.content-card p {
+    line-height: 1.4;
+}
+
+/* ==================== */
+/* CHARACTERISTICS GRID */
+/* ==================== */
+
+.char-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.char-box {
+    border: 4px solid #000000;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 6px 6px 0 #000000;
+    min-height: 120px;
+}
+
+.char-title {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* ==================== */
+/* COMPARISON SECTION */
+/* ==================== */
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.comparison-item {
+    border: 4px solid #000000;
+    padding: 24px;
+    background-color: #FFFFFF;
+    box-shadow: 8px 8px 0 #000000;
+}
+
+.comparison-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 8px;
+}
+
+.comparison-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.comparison-item li {
+    padding: 8px 0;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+.comparison-item li:last-child {
+    border-bottom: none;
+}
+
+.comparison-highlight {
+    background-color: #FFFF00;
+}
+
+.comparison-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+/* ==================== */
+/* FOOTER */
+/* ==================== */
+
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-top: 5px solid #FF0000;
+    padding: 32px 24px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.footer-content p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* ==================== */
+/* RESPONSIVE - MOBILE */
+/* ==================== */
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 24px 16px;
+        border-width: 4px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .content-grid,
+    .char-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-divider {
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        padding: 16px 0;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .placeholder-box {
+        min-height: 200px;
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .content-card h3,
+    .comparison-item h3 {
+        font-size: 20px;
+    }
+}
